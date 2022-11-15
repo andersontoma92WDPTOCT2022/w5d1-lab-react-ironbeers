@@ -1,6 +1,8 @@
 import axios from 'axios';
 import { useState } from 'react';
 import toast from 'react-hot-toast';
+import Button from 'react-bootstrap/Button';
+import Form from 'react-bootstrap/Form';
 
 function NewBeer() {
   //
@@ -41,74 +43,74 @@ function NewBeer() {
     <div>
       <div>new beer</div>
 
-      <form>
-        <div>
-          <label>name </label>
+      <Form className="newBeerForm">
+        <Form.Group className="mb-1">
+          <Form.Label className="p-1">name </Form.Label>
           <input
             type="text"
             name="name"
             onChange={handleChange}
             value={form.name}
           />
-        </div>
-        <div>
-          <label>tagline</label>
+        </Form.Group>
+        <Form.Group className="mb-1">
+          <Form.Label className="p-1">tagline</Form.Label>
           <input
             type="text"
             name="tagline"
             onChange={handleChange}
             value={form.tagline}
           />
-        </div>
-        <div>
-          <label>description </label>
+        </Form.Group>
+        <Form.Group className="mb-1">
+          <Form.Label className="p-1">description </Form.Label>
           <input
             type="text"
             name="description"
             onChange={handleChange}
             value={form.description}
           />
-        </div>
-        <div>
-          <label>first_brewed </label>
+        </Form.Group>
+        <Form.Group className="mb-1">
+          <Form.Label className="p-1">first_brewed </Form.Label>
           <input
             type="text"
             name="first_brewed"
             onChange={handleChange}
             value={form.first_brewed}
           />
-        </div>
-        <div>
-          <label>brewers_tips </label>
+        </Form.Group>
+        <Form.Group className="mb-1">
+          <Form.Label className="p-1">brewers_tips </Form.Label>
           <input
             type="text"
             name="brewers_tips"
             onChange={handleChange}
             value={form.brewers_tips}
           />
-        </div>
-        <div>
-          <label>attenuation_level </label>
+        </Form.Group>
+        <Form.Group className="mb-1">
+          <Form.Label className="p-1">attenuation_level </Form.Label>
           <input
             type="number"
             name="attenuation_level"
             onChange={handleChange}
             value={form.attenuation_level}
           />
-        </div>
-        <div>
-          <label>contributed_by </label>
+        </Form.Group>
+        <Form.Group className="mb-1">
+          <Form.Label className="p-1">contributed_by </Form.Label>
           <input
             type="text"
             name="contributed_by"
             onChange={handleChange}
             value={form.contributed_by}
           />
-        </div>
+        </Form.Group>
         <button onClick={handleSubmit}>salvar cerveja</button>
         {/* botão atualiza */}
         {/* <button onClick={handleReload}>Recarregar api!!</button> */}
-      </form>
+      </Form>
     </div>
   );
 }

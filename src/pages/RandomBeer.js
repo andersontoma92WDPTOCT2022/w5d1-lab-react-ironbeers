@@ -28,13 +28,13 @@ function RandomBeer() {
   //
   return (
     <div>
+      <button onClick={handleClick}>sortear</button>
       <div>-- sorteado -- </div>
       <div>{sorteado.name}</div>
       <div>{sorteado.brewers_tips}</div>
       <div>{sorteado.createdAt}</div>
       <div>{sorteado.description}</div>
-      <img className="imagem" src={sorteado.image} alt="teste" />
-      <button onClick={handleClick}>sortear</button>
+      <img className="imagemRandom" src={sorteado.image} alt="teste" />
     </div>
   );
 }

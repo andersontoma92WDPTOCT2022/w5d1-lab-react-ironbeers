@@ -34,12 +34,14 @@ function Beers({ beers, setBeers }) {
       </button>
       {beers.map((beer) => {
         return (
-          <div key={beer._id}>
+          <div key={beer._id} className="cardBeers text-center">
             <img className="imagem" src={beer.image} alt="teste" />
-            <Link to={`/Beers/${beer._id}`}>Ver mais detalhes</Link>
-            <div>{beer.name}</div>
-            <div>{beer.contributed_by}</div>
-            <div>{beer.tagline}</div>
+            <article>
+              <Link to={`/Beers/${beer._id}`}>Ver mais detalhes</Link>
+              <div>{beer.name}</div>
+              <div>{beer.contributed_by}</div>
+              <div>{beer.tagline}</div>
+            </article>
           </div>
         );
       })}
