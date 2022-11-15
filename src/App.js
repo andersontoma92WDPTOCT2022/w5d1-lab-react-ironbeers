@@ -10,6 +10,7 @@ import { Routes, Route } from 'react-router-dom'; // <== IMPORT
 import { useState } from 'react';
 //
 import toast, { Toaster } from 'react-hot-toast';
+import 'bootstrap/dist/css/bootstrap.min.css';
 //
 function App() {
   //
