@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 function Beers({ beers, setBeers }) {
   //
 
-  const [loading, setLoading] = useState(false);
+  const [atualiza, setAtualiza] = useState(false);
   //console.log(beers, 'beers');
   //
   useEffect(() => {
@@ -19,10 +19,19 @@ function Beers({ beers, setBeers }) {
       //console.log(beers, 'beers // ', loading, 'loading?');
     }
     fetchBeers(); //chama a função
-  }, []);
+  }, [atualiza]);
+  //
+
   //console.log('entrando no return');
   return (
     <div>
+      <button
+        onClick={() => {
+          setAtualiza(!atualiza);
+        }}
+      >
+        Reload Beers
+      </button>
       {beers.map((beer) => {
         return (
           <div key={beer._id}>
