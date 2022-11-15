@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 function RandomBeer() {
   //
   const [sorteado, setSorteado] = useState({});
+  const [botaoApertado, setBotaoApertado] = useState(false);
   //
   useEffect(() => {
     async function fetchSorteado() {
@@ -19,9 +20,12 @@ function RandomBeer() {
       //setLoading(true);
     }
     fetchSorteado(); //chama a função
-  }, []);
+  }, [botaoApertado]);
   //
-
+  function handleClick() {
+    setBotaoApertado(!botaoApertado);
+  }
+  //
   return (
     <div>
       <div>-- sorteado -- </div>
@@ -30,6 +34,7 @@ function RandomBeer() {
       <div>{sorteado.createdAt}</div>
       <div>{sorteado.description}</div>
       <img className="imagem" src={sorteado.image} alt="teste" />
+      <button onClick={handleClick}>sortear</button>
     </div>
   );
 }
