@@ -23,7 +23,7 @@ function BeerDetails() {
       <div>{beer.brewers_tips}</div>
       <div>{beer.createdAt}</div>
       <div>{beer.description}</div>
-      <img className="imagem" src={beer.image} />
+      <img className="imagem" src={beer.image} alt="teste" />
     </div>
   );
 }

@@ -11,14 +11,17 @@ import { useState } from 'react';
 //
 function App() {
   //
-  //const [beers, setBeers] = useState([]);
+  const [beers, setBeers] = useState([]);
   //
   return (
     <div className="App">
       <Navbar />
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/Beers" element={<Beers />} />
+        <Route
+          path="/Beers"
+          element={<Beers beers={beers} setBeers={setBeers} />}
+        />
         <Route path="/RandomBeer" element={<RandomBeer />} />
         <Route path="/NewBeer" element={<NewBeer />} />
         <Route path="/Beers/:beerID" element={<BeerDetails />} />
@@ -28,4 +31,4 @@ function App() {
 }
 
 export default App;
-/* beers={beers} setBeers={setBeers} */
+/* */
