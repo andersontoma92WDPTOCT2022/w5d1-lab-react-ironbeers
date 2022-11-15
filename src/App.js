@@ -9,12 +9,15 @@ import BeerDetails from './pages/BeerDetails';
 import { Routes, Route } from 'react-router-dom'; // <== IMPORT
 import { useState } from 'react';
 //
+import toast, { Toaster } from 'react-hot-toast';
+//
 function App() {
   //
   const [beers, setBeers] = useState([]);
   //
   return (
     <div className="App">
+      <Toaster />
       <Navbar />
       <Routes>
         <Route path="/" element={<HomePage />} />

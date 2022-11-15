@@ -1,5 +1,6 @@
 import axios from 'axios';
 import { useState } from 'react';
+import toast from 'react-hot-toast';
 
 function NewBeer() {
   //
@@ -33,7 +34,7 @@ function NewBeer() {
       contributed_by: '',
     });
     //handleReload();
-    //toast.success('Aluno criado com sucesso! :D');
+    toast.success('Beer criada com sucesso! :D');
   }
   //
   return (

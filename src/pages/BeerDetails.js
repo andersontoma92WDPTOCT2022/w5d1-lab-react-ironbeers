@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
+import toast from 'react-hot-toast';
 //
 function BeerDetails() {
   const { beerID } = useParams();
@@ -54,10 +55,12 @@ function BeerDetails() {
       //deletar a chave _id do obj
       delete clone._id;
       await axios.put(`https://ironbeer-api.fly.dev/edit/${beer._id}`, clone);
+      toast.success('Successfully Edited');
       setShowForm(false);
       setReload(!reload);
     } catch (error) {
       console.log(error);
+      toast.error("This didn't work.");
     }
 
     //handleReload();
